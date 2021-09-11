@@ -1,0 +1,51 @@
+@use '../themes/defaultThemes' as *;
+@use '../util' as *;
+
+.container {
+  width: 90vw;
+  margin: 5rem 0;
+  max-width: $fixed-width;
+  background: $white;
+  border-radius: $radius;
+  padding: 1.5rem 2rem;
+  box-shadow: $dark-shadow;
+  h3 {
+    font-weight: normal;
+    text-transform: none;
+    margin-bottom: 2rem;
+  }
+}
+
+.flex {
+  @include flex-column-center;
+}
+
+// .btn {
+//   color: $white;
+//   display: block;
+//   width: 45%;
+//   border-color: transparent;
+//   background: $primary-4;
+//   margin: 2rem auto 0 auto;
+//   text-transform: capitalize;
+//   font-size: 1.2rem;
+//   padding: 0.5rem 0;
+//   letter-spacing: $spacing;
+//   border-radius: $radius;
+//   outline: none;
+// }
+
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+@include large {
+  .section {
+    width: 95vw;
+  }
+  .flex {
+    @include flex-center;
+  }
+}

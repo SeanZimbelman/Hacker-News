@@ -1,0 +1,51 @@
+@function half($num) {
+  @return $num / 2;
+}
+
+@function negative($num){
+  @return 0 - $num;
+}
+
+@function color-picker($color, $shade){
+  $color-0: hsl($color, 60%, 21%);
+  $color-1: hsl($color, 60%, 29%);
+  $color-2: hsl($color, 60%, 37%);
+  $color-3: hsl($color, 60%, 45%);
+  $color-4: hsl($color, 60%, 52%);
+  $color-5: hsl($color, 60%, 60%);
+  $color-6: hsl($color, 60%, 67%);
+  $color-7: hsl($color, 60%, 74%);
+  $color-8: hsl($color, 60%, 81%);
+  $color-9: hsl($color, 60%, 88%);
+
+  @if $shade == 0{
+    @return $color-0;
+  }
+  @if $shade == 1{
+    @return $color-1;
+  }
+  @if $shade == 2{
+    @return $color-2;
+  }
+  @if $shade == 3{
+    @return $color-3;
+  }
+  @if $shade == 4{
+    @return $color-4;
+  }
+  @if $shade == 5{
+    @return $color-5;
+  }
+  @if $shade == 6{
+    @return $color-6;
+  }
+  @if $shade == 7{
+    @return $color-7;
+  }
+  @if $shade == 8{
+    @return $color-8;
+  }
+  @if $shade == 9{
+    @return $color-9;
+  }
+}

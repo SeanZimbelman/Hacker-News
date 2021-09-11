@@ -1,0 +1,31 @@
+@use '../themes/defaultThemes' as *;
+@use '../util' as *;
+
+.single-movie{
+  width: 90vw;
+  max-width: $max-width;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+  img{
+    width: 350px;
+    margin: 0 auto;
+    display: block;
+  }
+  p{
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    line-height: 1.8rem;
+  }
+  .btn{
+    text-transform: capitalize;
+    padding: 0.25rem 0.5rem;
+    background: $primary-5;
+    color: $white;
+    border-radius: inline-block;
+    margin-top: 0.5rem;
+    letter-spacing: $spacing;
+  }
+}
