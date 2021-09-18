@@ -1,8 +1,8 @@
 import React from "react";
-import { useHackContext } from "../util/context";
+import { useGlobalContext } from "../util/context";
 
 const SearchForm = () => {
-  const { query, setQuery, error } = useHackContext();
+  const { query, handleSearch } = useGlobalContext();
   return (
     <form onSubmit={(e) => e.preventDefault()} className="search-form">
       <h2>Search Hacker News</h2>
@@ -10,9 +10,8 @@ const SearchForm = () => {
         type="text"
         className="form-imput"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => handleSearch(e.target.value)}
       />
-      {error.show && <div className="error">{error.msg}</div>}
     </form>
   );
 };

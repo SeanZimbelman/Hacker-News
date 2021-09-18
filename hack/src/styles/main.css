@@ -315,43 +315,57 @@ h4 {
   letter-spacing: 0.1rem;
 }
 
-.movies {
+.hacks {
   width: 90vw;
-  max-width: 2000px;
+  margin: 1rem auto;
   display: grid;
-  gap: 2rem;
-  padding: 3rem 0 5rem 0;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
 }
-.movies .movie {
+.hacks .hack {
+  background: #0004;
+  margin: 1rem auto;
+  width: 90%;
+  height: 9rem;
+  padding: 1rem 1rem;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.hacks .hack .hack-info .title {
+  font-size: 1.25rem;
+}
+.hacks .hack .hack-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.hacks .hack .hack-buttons a {
+  color: #e67300;
+}
+.hacks .hack .hack-buttons a:visited {
+  color: #e67300;
+}
+.hacks .hack .hack-buttons .remove-btn {
+  color: #000;
+}
+
+.page-buttons {
   margin: 0 auto;
-  overflow: hidden;
-  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2rem;
+  color: #ff9933;
 }
-.movies .movie img {
-  width: auto;
-  height: 400px;
-  max-width: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
-}
-.movies .movie:hover .movie-info {
-  transform: translateY(0);
-}
-.movies .movie-info {
-  background: #0006;
-  padding: 0.5rem 1rem;
-  color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.page-buttons .page-imput {
   width: 100%;
-  transform: translateY(100%);
-  transition: all 0.5s linear;
+  max-width: 2.75rem;
+  color: #ff9933;
+  margin-bottom: 5px;
 }
-.movies .movie-info p {
-  color: #fff;
+.page-buttons .btn {
+  margin: 0 1rem;
 }
 
 .search-form {

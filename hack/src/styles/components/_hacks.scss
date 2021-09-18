@@ -1,0 +1,39 @@
+@use '../themes/defaultThemes' as *;
+@use '../util' as *;
+
+.hacks {
+  width: 90vw;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .hack {
+    background: #0004;
+    margin: 1rem auto;
+    width: 90%;
+    height: 9rem;
+    padding: 1rem 1rem;
+    border-radius: $radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .hack-info{
+      .title{
+        font-size: 1.25rem;
+      }
+    }
+    .hack-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      a{
+        color: $secondary-3;
+        &:visited {
+          color: $secondary-3;
+        }
+      }
+      .remove-btn {
+        color: $black;
+      }
+    }
+  }
+}

@@ -1,41 +1,42 @@
 import React from "react";
-import { useHackContext } from "../util/context";
+import { useGlobalContext } from "../util/context";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { reducer } from "../util/reducer";
 
 const Page = () => {
-  const { loading, page, setPage, nbPages } = useHackContext();
+  const { loading, page, nbPages, hanndlePage, setPage } = useGlobalContext();
   return (
-    <div className="buttons">
+    <div className="page-buttons">
       {loading ? (
-        <button>
+        <button className="btn">
           <FaArrowAltCircleLeft />
         </button>
       ) : (
         <button
+          className="btn"
           onClick={() => {
-            if (page - 1 < 0) {
-              setPage(nbPages - 1);
-            } else {
-              setPage(page - 1);
-            }
+            hanndlePage("dec");
           }}
         >
           <FaArrowAltCircleLeft />
         </button>
       )}
-      {page + 1} of {nbPages}
+      <input
+        type="text"
+        className="page-imput"
+        value={page + 1}
+        onChange={(e) => setPage(e.target.value - 1)}
+      />
+      of {nbPages}
       {loading ? (
-        <button>
+        <button className="btn">
           <FaArrowAltCircleRight />
         </button>
       ) : (
         <button
+          className="btn"
           onClick={() => {
-            if (page + 1 >= nbPages) {
-              setPage(0);
-            } else {
-              setPage(page + 1);
-            }
+            hanndlePage("inc");
           }}
         >
           <FaArrowAltCircleRight />

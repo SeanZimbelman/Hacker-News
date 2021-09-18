@@ -1,0 +1,18 @@
+@use '../themes/defaultThemes' as *;
+@use '../util' as *;
+
+.page-buttons{
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 2rem;
+  color: $secondary-5;
+  .page-imput{
+    width: 100%;
+    max-width: 2.75rem;
+    color: $secondary-5;
+    margin-bottom: 5px;
+  }
+  .btn{
+    margin: 0 1rem;
+  }
+}

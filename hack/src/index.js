@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { HackProvider } from "./util/context";
+import { AppProvider } from "./util/context";
 import "./styles/main.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <HackProvider>
+    <AppProvider>
         <App />
-    </HackProvider>
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
